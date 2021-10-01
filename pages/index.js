@@ -3,7 +3,7 @@ import styles from "../styles/home.module.scss";
 export default function Home() {
   return (
     <div className={styles.container}>
-      <p>not found.</p>
+      <p>try me</p>
     </div>
   );
 }
