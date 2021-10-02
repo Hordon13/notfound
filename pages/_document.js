@@ -7,6 +7,25 @@ class MyDocument extends Document {
         <Head />
         <title>404: NOT_FOUND</title>
         <link rel="icon" href="/favicon.ico" />
+        <link href="/font/fonts.css" rel="stylesheet" />
+        <link
+          rel="preload"
+          href="/font/Ashley-Black.otf"
+          as="font"
+          type="font/otf"
+        />
+        <link
+          rel="preload"
+          href="/font/Altero-Regular.otf"
+          as="font"
+          type="font/otf"
+        />
+        <link
+          rel="preload"
+          href="/font/Altero-Outline.otf"
+          as="font"
+          type="font/otf"
+        />
         <body>
           <Main />
           <NextScript />

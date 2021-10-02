@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "Altero";
+  src: url("Altero-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Altero Outline";
+  src: url("Altero-Outline.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ashley";
+  src: url("Ashley-Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
