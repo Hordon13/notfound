@@ -4,44 +4,55 @@ import { useEffect, useState } from "react";
 
 export default function Home() {
   const [translateX, setTranslateX] = useState(0);
+  const scrollMe = () => setTranslateX(window.scrollY / 100);
   useEffect(() => {
     window.addEventListener("scroll", throttle(scrollMe, 10));
   }, []);
 
-  const scrollMe = () => setTranslateX(window.scrollY / 100);
-
   return (
-    <div className={styles.container}>
+    <>
+      <main className={styles.container}>
+        <section className={styles.hero}>
+          <header>
+            <div
+              className={styles.caption}
+              style={{ transform: `translateX(${-25 + translateX / 2}%)` }}
+            >
+              <p>pagenotfound</p>
+              <span>page</span>
+              <p>notfoundpagenotfound</p>
+            </div>
+            <div className={styles.headline}>
+              <div className={styles.cta}>
+                <span>
+                  <a href="">mine neither</a>
+                </span>
+              </div>
+              <h2>and yours?</h2>
+            </div>
+            <div
+              className={styles.caption}
+              style={{ transform: `translateX(${-30 - translateX}%)` }}
+            >
+              <p>pagenotfoundpage</p>
+              <span>not</span>
+              <p>foundpagenotfound</p>
+            </div>
+            <div
+              className={styles.caption}
+              style={{ transform: `translateX(${-40 - translateX / 2}%)` }}
+            >
+              <p>pagenotfoundpagenot</p>
+              <span>found</span>
+              <p>pagenotfoundpagenot</p>
+            </div>
+          </header>
+        </section>
+        <section className={styles.intro}></section>
+        <section className={styles.references}></section>
+        <section className={styles.contact}></section>
+      </main>
       <div className={styles.noise}></div>
-      <div className={styles.title}>
-        <div>
-          <div
-            className={styles.line}
-            style={{ transform: `translateX(${-25 + translateX / 2}%)` }}
-          >
-            <p>pagenotfound</p>
-            <span>page</span>
-            <p>notfoundpagenotfound</p>
-          </div>
-          <div className={styles.highlight}>and yours?</div>
-          <div
-            className={styles.line}
-            style={{ transform: `translateX(${-30 - translateX}%)` }}
-          >
-            <p>pagenotfoundpage</p>
-            <span>not</span>
-            <p>foundpagenotfound</p>
-          </div>
-          <div
-            className={styles.line}
-            style={{ transform: `translateX(${-40 - translateX / 3}%)` }}
-          >
-            <p>pagenotfoundpagenot</p>
-            <span>found</span>
-            <p>pagenotfoundpagenot</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    </>
   );
 }

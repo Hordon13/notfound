@@ -1,9 +1,9 @@
-@use 'scss/reset';
+@use "scss/reset";
 @import "scss/main";
-
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;800&display=swap");
 
 body {
   font-family: "JetBrains Mono", monospace;
-  background-color: #232426;
+  color: $neutral-light;
+  background-color: $neutral-dark;
 }
