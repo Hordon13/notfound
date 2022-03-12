@@ -10,11 +10,16 @@
 
 .heroMobile {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+  padding-bottom: 20vh;
   height: 100vh;
   font-family: "Altero Outline";
   overflow: hidden;
-  box-shadow: inset 0px 0px 150px black;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(24, 24, 24, 0),
+    rgba(24, 24, 24, 0.9) 100%
+  );
   color: $neutral-light-fade;
   line-height: 0.9;
   letter-spacing: 3px;
@@ -92,7 +97,13 @@
   pointer-events: none;
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 667px) {
+  .heroMobile {
+    padding-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
   .heroMobile {
     display: none;
   }

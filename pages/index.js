@@ -4,13 +4,9 @@ import { useEffect, useState } from "react";
 
 export default function Home() {
   const [translateX, setTranslateX] = useState(0);
-  const [translateXmob, setTranslateXmob] = useState([]);
   const scrollMe = () => setTranslateX(window.scrollY / 100);
   useEffect(() => {
     window.addEventListener("scroll", throttle(scrollMe, 10));
-    for (let i = 0; i < 20; i++) {
-      setTranslateXmob((arr) => [...arr, Math.floor(Math.random() * 30)]);
-    }
   }, []);
 
   return (
@@ -54,16 +50,6 @@ export default function Home() {
         </section>
         <section className={styles.heroMobile}>
           <header>
-            {[...Array(10)].map((_, i) => (
-              <p
-                style={{
-                  transform: `translateX(-${translateXmob[i]}%)`,
-                }}
-                key={i}
-              >
-                pagenotfoundpagepagenotfoundpagepagenotfoundpage
-              </p>
-            ))}
             <div
               className={styles.caption}
               style={{ transform: `translateX(${-30 + translateX / 2}%)` }}
@@ -74,11 +60,11 @@ export default function Home() {
             </div>
 
             <h3>
-              yoursandyoursandyoursandyoursandyoursspan<span>and</span>
+              yoursandyoursandyoursandyoursandyours<span>and</span>
             </h3>
             <span></span>
             <h3>
-              andyoursandyoursandyoursandyourssand<span>yours?</span>
+              andyoursandyoursandyoursandyoursand<span>yours?</span>
             </h3>
             <div
               className={styles.caption}
@@ -96,16 +82,6 @@ export default function Home() {
               <span>found</span>
               <p>pagenotfoundpagenotfoundpagenot</p>
             </div>
-            {[...Array(10)].map((_, i) => (
-              <p
-                style={{
-                  transform: `translateX(-${translateXmob[i]}%)`,
-                }}
-                key={i}
-              >
-                pagenotfoundpagepagenotfoundpagepagenotfoundpage
-              </p>
-            ))}
           </header>
         </section>
         <section className={styles.intro}></section>

@@ -1,0 +1,15 @@
+@import "scss/main";
+
+.cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: black;
+  pointer-events: none;
+  z-index: 999;
+  mix-blend-mode: difference;
+  background-color: deepskyblue;
+}
