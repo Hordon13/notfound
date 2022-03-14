@@ -10,8 +10,8 @@
 
 .heroMobile {
   display: flex;
-  align-items: flex-end;
-  padding-bottom: 20vh;
+  align-items: flex-start;
+  padding-top: 20vh;
   height: 100vh;
   font-weight: bold;
   font-family: "Altero Outline";
@@ -51,30 +51,24 @@
   .cta {
     position: absolute;
     font-family: "Altero";
-    height: 300px;
-    width: 300px;
-    bottom: 15vh;
+    width: min(70vw, 400px);
+    height: min(70vw, 400px);
+    top: 48vh;
     left: 50%;
     transform: translateX(-50%);
 
     span {
-      backdrop-filter: blur(2px);
       display: grid;
       place-items: center;
       width: 100%;
       height: 100%;
-      border: $neutral-light-fade solid 12px;
+      border: $neutral-light-fade solid clamp(12px, 2vw, 18px);
       border-radius: 50%;
-      cursor: pointer;
-      transition: height 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
-        width 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 
       a {
         color: $neutral-light;
-        font-size: 16px;
-        border-bottom: $primary 4px solid;
-        transition: border 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-        z-index: 2;
+        font-size: clamp(16px, 4vw, 24px);
+        border-bottom: $primary 6px solid;
       }
     }
   }
@@ -98,9 +92,9 @@
   pointer-events: none;
 }
 
-@media only screen and (min-width: 667px) {
+@media (orientation: landscape) {
   .heroMobile {
-    padding-bottom: 0;
+    display: none;
   }
 }
 

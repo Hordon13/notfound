@@ -83,6 +83,11 @@ export default function Home() {
               <p>pagenotfoundpagenotfoundpagenot</p>
             </div>
           </header>
+          <div className={styles.cta}>
+            <span>
+              <a href="">mine neither</a>
+            </span>
+          </div>
         </section>
         <section className={styles.intro}></section>
         <section className={styles.references}></section>
