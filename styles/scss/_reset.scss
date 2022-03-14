@@ -3,7 +3,6 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  /* cursor: none !important; */
 }
 
 /* Remove default padding */
@@ -77,5 +76,11 @@ select {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  * {
+    cursor: none !important;
   }
 }

@@ -1,6 +1,7 @@
 import styles from "../styles/home.module.scss";
 import throttle from "lodash.throttle";
 import { useEffect, useState } from "react";
+import Cursor from "../components/Cursor";
 
 export default function Home() {
   const [translateX, setTranslateX] = useState(0);
@@ -12,6 +13,7 @@ export default function Home() {
   return (
     <>
       <main className={styles.container}>
+        <Cursor />
         <section className={styles.heroDesktop}>
           <header>
             <div
