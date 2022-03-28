@@ -1,0 +1,74 @@
+@import "scss/main";
+
+.intro {
+  min-height: 100vh;
+  padding-top: 150px;
+
+  .headline {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+
+    p {
+      width: 650px;
+      line-height: 1;
+      font-size: 36px;
+      align-self: center;
+      text-align: justify;
+
+      &:nth-of-type(1) {
+        margin-bottom: 36px;
+        margin-top: 56px;
+      }
+    }
+
+    span {
+      font-family: "Altero";
+      color: $primary;
+      font-size: 56px;
+      margin-bottom: 48px;
+      margin-top: 18px;
+      align-self: center;
+    }
+  }
+
+  .separator {
+    width: 40vw;
+    height: 6px;
+    background-color: $primary;
+    border-radius: 3px;
+
+    &:nth-of-type(2) {
+      align-self: flex-end;
+    }
+  }
+
+  .wrapper {
+    display: flex;
+    margin-left: 64px;
+    margin-bottom: 150px;
+
+    h3 {
+      margin-top: 36px;
+      font-size: 64px;
+      color: $neutral-light-fade;
+      line-height: 1;
+    }
+
+    p {
+      margin-top: 24px;
+      font-size: 24px;
+      max-width: 40vw;
+    }
+
+    svg {
+      margin-left: 120px;
+      margin-top: 50px;
+      height: 350px;
+      width: 600px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+}

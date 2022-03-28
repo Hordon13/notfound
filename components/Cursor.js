@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import styles from "../styles/Cursor.module.scss";
+import styles from "../styles/cursor.module.scss";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
 const Cursor = () => {
