@@ -9,7 +9,7 @@
       max-width: 500px;
       margin: 0 auto;
       background-color: $primary;
-      color: #000;
+      color: $neutral-dark;
       font-family: "Altero";
       font-size: 24px;
       line-height: 1.2;
@@ -17,19 +17,45 @@
       border-radius: 12px;
       display: grid;
       gap: 24px;
+      margin-bottom: 80px;
+    }
+
+    .feature {
+      max-width: 600px;
+      margin: 0 auto 100px auto;
+      padding-top: 18px;
+      display: flex;
+      flex-direction: column;
+
+      .title {
+        text-align: left;
+        margin-bottom: 60px;
+      }
+
+      .text {
+        padding: 24px;
+        font-size: 18px;
+        border-radius: 12px;
+        margin-bottom: 30px;
+        background-color: $neutral-dark-fade;
+      }
+
+      svg {
+        width: 100%;
+      }
     }
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .container {
-    padding: 0 36px;
+    padding: 0 72px;
 
     .content {
       padding-top: 150px;
 
       .card {
-        max-width: 1130px;
+        max-width: 1000px;
         font-size: 36px;
         padding: 48px 36px;
         border-radius: 18px;
@@ -49,6 +75,57 @@
           z-index: -1;
           opacity: 0.6;
         }
+      }
+
+      .feature {
+        max-width: none;
+        margin: 0 auto 200px auto;
+        padding-top: 56px;
+
+        .title {
+          text-align: right;
+          padding-right: 150px;
+          margin-bottom: 100px;
+        }
+
+        .text {
+          padding: 36px;
+          font-size: 30px;
+          border-radius: 18px;
+          width: 60%;
+          margin-bottom: 50px;
+          margin-left: 150px;
+          background-color: $neutral-dark-fade;
+        }
+
+        svg {
+          width: 60%;
+          align-self: flex-end;
+          margin-right: 150px;
+        }
+      }
+
+      .feature:nth-of-type(odd) {
+        .title {
+          text-align: left;
+          padding-left: 150px;
+        }
+
+        .text {
+          align-self: flex-end;
+          margin-right: 150px;
+        }
+
+        svg {
+          align-self: flex-start;
+          margin-left: 150px;
+          width: 50%;
+        }
+      }
+
+      .feature:last-of-type svg {
+        width: 65%;
+        margin-right: 90px;
       }
     }
   }
