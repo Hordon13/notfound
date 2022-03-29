@@ -1,74 +1,55 @@
 @import "scss/main";
 
-.intro {
-  min-height: 100vh;
-  padding-top: 150px;
+.container {
+  padding: 0 30px;
 
-  .headline {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 100px;
-
-    p {
-      width: 650px;
-      line-height: 1;
-      font-size: 36px;
-      align-self: center;
-      text-align: justify;
-
-      &:nth-of-type(1) {
-        margin-bottom: 36px;
-        margin-top: 56px;
-      }
-    }
-
-    span {
+  .content {
+    .card {
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto;
+      background-color: $primary;
+      color: #000;
       font-family: "Altero";
-      color: $primary;
-      font-size: 56px;
-      margin-bottom: 48px;
-      margin-top: 18px;
-      align-self: center;
-    }
-  }
-
-  .separator {
-    width: 40vw;
-    height: 6px;
-    background-color: $primary;
-    border-radius: 3px;
-
-    &:nth-of-type(2) {
-      align-self: flex-end;
-    }
-  }
-
-  .wrapper {
-    display: flex;
-    margin-left: 64px;
-    margin-bottom: 150px;
-
-    h3 {
-      margin-top: 36px;
-      font-size: 64px;
-      color: $neutral-light-fade;
-      line-height: 1;
-    }
-
-    p {
-      margin-top: 24px;
       font-size: 24px;
-      max-width: 40vw;
-    }
-
-    svg {
-      margin-left: 120px;
-      margin-top: 50px;
-      height: 350px;
-      width: 600px;
+      line-height: 1.2;
+      padding: 24px;
+      border-radius: 12px;
+      display: grid;
+      gap: 24px;
     }
   }
 }
 
 @media only screen and (min-width: 1024px) {
+  .container {
+    padding: 0 36px;
+
+    .content {
+      padding-top: 150px;
+
+      .card {
+        max-width: 1130px;
+        font-size: 36px;
+        padding: 48px 36px;
+        border-radius: 18px;
+        gap: 36px;
+        margin-bottom: 150px;
+        position: relative;
+
+        &::after {
+          content: "";
+          background-color: $primary;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          filter: blur(15px);
+          z-index: -1;
+          opacity: 0.6;
+        }
+      }
+    }
+  }
 }

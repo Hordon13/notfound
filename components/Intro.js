@@ -1,18 +1,26 @@
 import styles from "../styles/intro.module.scss";
+import Title from "./Title";
 
 const Intro = () => {
   return (
-    <section className={styles.intro}>
-      <div className={styles.headline}>
-        <div className={styles.separator}></div>
-        <p>
-          Your website is the first thing through which most of your customers
-          will meet your brand.
-        </p>
-        <p>We help you make that first impression</p>
-        <span>remarkable</span>
-        <div className={styles.separator}></div>
+    <section className={styles.container}>
+      <div className={styles.content}>
+        <div className={styles.card}>
+          <p>
+            Your website is the first thing through which most of your customers
+            will meet your brand.
+          </p>
+          <p>We help you make that first impression...</p>
+        </div>
       </div>
+    </section>
+  );
+};
+
+export default Intro;
+
+/* 
+
       <div className={styles.wrapper}>
         <div>
           <h3>Latest is the greatest</h3>
@@ -406,8 +414,5 @@ const Intro = () => {
           />
         </svg>
       </div>
-    </section>
-  );
-};
 
-export default Intro;
+*/
