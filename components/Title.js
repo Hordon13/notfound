@@ -11,7 +11,7 @@ const Title = ({ text }) => {
     const header = document.getElementById(text);
     const rect = header.getBoundingClientRect();
     setCenter(rect.top);
-  }, []);
+  }, [text]);
 
   const distort = useCallback(() => {
     const distance = window.scrollY - (center - window.innerHeight / 2);
