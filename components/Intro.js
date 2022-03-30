@@ -15,7 +15,7 @@ const Intro = () => {
             Your website is the first thing through which most of your customers
             will meet your brand.
           </p>
-          <p>We help you make that first impression is...</p>
+          <p>We help you make that first impression...</p>
         </section>
         <section className={styles.feature}>
           <div className={styles.title}>
