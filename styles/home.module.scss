@@ -1,9 +1,5 @@
 @import "scss/main";
 
-.container {
-  overflow-x: hidden;
-}
-
 .noise {
   animation: grain 6s steps(10) infinite;
   background-image: url("/noise.png");

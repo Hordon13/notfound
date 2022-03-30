@@ -8,8 +8,6 @@ export default function Home() {
       <main className={styles.container}>
         <Hero />
         <Intro />
-        <section className={styles.references}></section>
-        <section className={styles.contact}></section>
       </main>
       <div className={styles.noise}></div>
     </>
