@@ -566,6 +566,23 @@ const Intro = () => {
               fill="#2F2E41"
             />
           </svg>
+          <div
+            onClick={() => setIsStackExpanded(!isStackExpanded)}
+            className={`${styles.details} ${
+              isStackExpanded ? styles.detailsExpanded : ""
+            }`}
+          >
+            <Marquee gradient={false} className={styles.marquee}>
+              &nbsp;tech stack • tech stack • tech stack • tech stack • tech
+              stack • tech stack • tech stack • tech stack •
+            </Marquee>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo ad
+              repudiandae fugit! Eum vel animi placeat amet officia mollitia
+              harum? Quidem quia nisi officia, eos accusantium obcaecati
+              voluptates consequuntur possimus!
+            </p>
+          </div>
         </section>
         <section className={styles.feature}>
           <div className={styles.title}>
@@ -703,23 +720,6 @@ const Intro = () => {
               transform="translate(-30.41456 -122.72838)"
             />
           </svg>
-          <div
-            onClick={() => setIsStackExpanded(!isStackExpanded)}
-            className={`${styles.details} ${
-              isStackExpanded ? styles.detailsExpanded : ""
-            }`}
-          >
-            <Marquee gradient={false} className={styles.marquee}>
-              &nbsp;tech stack • tech stack • tech stack • tech stack • tech
-              stack • tech stack • tech stack • tech stack •
-            </Marquee>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo ad
-              repudiandae fugit! Eum vel animi placeat amet officia mollitia
-              harum? Quidem quia nisi officia, eos accusantium obcaecati
-              voluptates consequuntur possimus!
-            </p>
-          </div>
         </section>
       </div>
     </section>
