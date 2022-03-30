@@ -26,6 +26,7 @@
       padding-top: 18px;
       display: flex;
       flex-direction: column;
+      overflow: hidden;
 
       .title {
         text-align: left;
@@ -43,7 +44,65 @@
       svg {
         width: 100%;
       }
+
+      .details {
+        width: 100%;
+        height: 70px;
+        max-height: 70px;
+        margin-top: 70px;
+        border-top: 2px solid $primary;
+        border-bottom: 2px solid $primary;
+        display: flex;
+        align-items: flex-start;
+        font-size: 24px;
+        font-family: "Altero";
+        transition: ease-in-out max-height 1.2s,
+          ease-in-out background-color 0.6s, ease-in-out border-radius 0.6s,
+          ease-in-out border 0.6s, ease-in-out color 0.8s;
+        box-sizing: border-box;
+        position: relative;
+
+        .marquee {
+          position: absolute;
+          top: 0;
+          height: 70px;
+        }
+
+        p {
+          opacity: 0;
+          height: auto;
+          line-height: 0;
+        }
+      }
+
+      .detailsExpanded {
+        max-height: 100vh;
+        height: auto;
+        border-radius: 12px;
+        background-color: $primary;
+        padding-top: 16px;
+        color: $neutral-dark-fade;
+
+        p {
+          text-align: justify;
+          font-family: "NB INternational";
+          opacity: 1;
+          line-height: 1.4;
+          height: auto;
+          font-size: 21px;
+          padding: 36px;
+          margin-top: 36px;
+          transition: opacity ease-in-out 0.4s;
+          transition-delay: 0.5s;
+        }
+      }
     }
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .container .content .feature {
+    padding-top: 28px;
   }
 }
 

@@ -1,7 +1,12 @@
 import styles from "../styles/intro.module.scss";
 import Title from "./Title";
+import Marquee from "react-fast-marquee";
+import { useState } from "react";
 
 const Intro = () => {
+  const [isCollabExpanded, setIsCollabExpanded] = useState(false);
+  const [isStackExpanded, setIsStackExpanded] = useState(false);
+
   return (
     <section className={styles.container}>
       <div className={styles.content}>
@@ -193,6 +198,24 @@ const Intro = () => {
               transform="translate(-110 -205.25977)"
             />
           </svg>
+          <div
+            onClick={() => setIsCollabExpanded(!isCollabExpanded)}
+            className={`${styles.details} ${
+              isCollabExpanded ? styles.detailsExpanded : ""
+            }`}
+          >
+            <Marquee className={styles.marquee} gradient={false}>
+              &nbsp;design collab • design collab • design collab • design
+              collab • design collab • design collab • design collab • design
+              collab •
+            </Marquee>
+            <p>
+              Designing meaningful UI and UX is a skill on their own. While we
+              can create simple interfaces or working from existing design but
+              if you have a more complex design in your mind we will outsource
+              the task to our friends at ALTRD Studio.
+            </p>
+          </div>
         </section>
         <section className={styles.feature}>
           <div className={styles.title}>
@@ -680,6 +703,23 @@ const Intro = () => {
               transform="translate(-30.41456 -122.72838)"
             />
           </svg>
+          <div
+            onClick={() => setIsStackExpanded(!isStackExpanded)}
+            className={`${styles.details} ${
+              isStackExpanded ? styles.detailsExpanded : ""
+            }`}
+          >
+            <Marquee gradient={false} className={styles.marquee}>
+              &nbsp;tech stack • tech stack • tech stack • tech stack • tech
+              stack • tech stack • tech stack • tech stack •
+            </Marquee>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo ad
+              repudiandae fugit! Eum vel animi placeat amet officia mollitia
+              harum? Quidem quia nisi officia, eos accusantium obcaecati
+              voluptates consequuntur possimus!
+            </p>
+          </div>
         </section>
       </div>
     </section>
