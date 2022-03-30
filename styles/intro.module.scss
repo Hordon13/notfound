@@ -22,7 +22,7 @@
 
     .feature {
       max-width: 600px;
-      margin: 0 auto 100px auto;
+      margin: 0 auto 70px auto;
       padding-top: 18px;
       display: flex;
       flex-direction: column;
@@ -56,7 +56,7 @@
         align-items: flex-start;
         font-size: 24px;
         font-family: "Altero";
-        transition: ease-in-out max-height 1.2s,
+        transition: ease-in-out max-height 0.8s,
           ease-in-out background-color 0.6s, ease-in-out border-radius 0.6s,
           ease-in-out border 0.6s, ease-in-out color 0.8s;
         box-sizing: border-box;
@@ -85,7 +85,7 @@
 
         p {
           text-align: justify;
-          font-family: "NB INternational";
+          font-family: "NB International";
           opacity: 1;
           line-height: 1.4;
           height: auto;
