@@ -1,26 +1,32 @@
 @import "scss/main";
 
 .container {
-  min-height: 70vh;
-  padding-top: 100px;
+  padding-top: 20px;
 
-  .content {
+  h1 {
+    font-family: "Altero";
+    font-size: 42px;
+    line-height: 1;
+    margin-bottom: 100px;
+    padding-left: 30px;
+  }
+
+  .projects {
     display: flex;
-    overflow: scroll;
+    justify-content: space-between;
+    overflow-x: scroll;
     scrollbar-width: none;
+    padding: 0 calc((100vw - 2 * 175px) / 2);
+    margin: 0 auto;
 
     &::-webkit-scrollbar {
       display: none;
     }
 
-    .project:first-of-type {
-      margin-left: calc((100vw - 250px) / 2);
-    }
-
     .project {
-      width: 250px;
-      min-width: 250px;
-      height: 250px;
+      width: 175px;
+      min-width: 175px;
+      height: 175px;
       overflow: hidden;
       display: grid;
       place-items: center;
@@ -28,35 +34,36 @@
       font-size: 21px;
       position: relative;
       transition: all ease-in-out 0.4s;
-      margin-right: 30px;
 
       .circle {
-        width: 150px;
-        height: 150px;
+        width: 100px;
+        height: 100px;
         background-color: $primary;
         border-radius: 50%;
         position: absolute;
         display: grid;
         place-items: center;
-        transition: all ease-in-out 0.4s;
+        transition: width 0.4s ease-in-out, height 0.4s ease-in-out,
+          border-radius 0.4s ease-in-out 0.1s;
 
-        img {
+        svg {
           width: 40%;
-          opacity: 0.8;
+          opacity: 0.9;
         }
       }
 
-      svg {
+      & > svg {
         position: absolute;
         animation: rotation 20s linear infinite;
         opacity: 0.3;
         transition: opacity linear 0.6s;
         transition-delay: 0.2s;
+        width: 350px;
       }
     }
 
     .projectExpanded {
-      width: calc(100vw - 60px);
+      min-width: calc(100vw - 60px);
       height: calc(100vw - 60px);
 
       .circle {
@@ -65,10 +72,45 @@
         height: calc(100vw - 60px);
       }
 
-      svg {
+      & > svg {
+        height: 0;
+        width: 0;
         opacity: 0;
         transition: opacity linear 0.1s;
       }
+    }
+
+    .project:nth-of-type(2) {
+      margin: 0 calc((100vw - 2 * 175px) / 2);
+    }
+  }
+
+  .showroom {
+    width: calc(100vw - 60px);
+    height: calc(100vw - 60px);
+    border: 3px $primary dashed;
+    border-radius: 18px;
+    margin: 60px auto;
+    display: grid;
+    place-items: center;
+    box-sizing: border-box;
+    display: none;
+
+    .dot {
+      height: 0px;
+      width: 0px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background-color: $primary;
+      transition: height 0.5s ease-in-out, width 0.5s ease-in-out,
+        border-radius 0.3s ease-in-out 0.35s;
+    }
+
+    .show {
+      height: 100%;
+      width: 100%;
+      border-radius: 12px;
     }
   }
 }
