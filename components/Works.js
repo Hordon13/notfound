@@ -21,10 +21,10 @@ const Works = () => {
       setTimeout(() => {
         const offset = target.offsetLeft;
         container.scrollTo({ left: offset - 30, behavior: "smooth" });
-        container.style.overflow = "hidden";
+        // container.style.overflow = "hidden";
       }, 400);
     } else {
-      container.style.overflow = "scroll";
+      // container.style.overflow = "scroll";
     }
   };
 
