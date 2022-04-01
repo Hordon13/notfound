@@ -34,7 +34,7 @@
       color: $neutral-dark-fade;
       font-size: 21px;
       position: relative;
-      transition: all ease-in-out 0.4s;
+      transition: min-width ease-in-out 0.4s, height ease-in-out 0.4s;
 
       .circle {
         width: 100px;

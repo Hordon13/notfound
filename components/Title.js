@@ -5,7 +5,7 @@ import throttle from "lodash.throttle";
 const Title = ({ text }) => {
   const [isPassed, setIsPassed] = useState(false);
   const [center, setCenter] = useState(0);
-  const [offset, setOffset] = useState(1);
+  const [offset, setOffset] = useState(0);
 
   useEffect(() => {
     const header = document.getElementById(text);

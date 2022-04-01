@@ -18,15 +18,23 @@ const Works = () => {
     const container = document.getElementById("projects");
 
     if (selectedProject !== id) {
+      container.style.pointerEvents = "none";
       setTimeout(() => {
         const offset = target.offsetLeft;
         container.scrollTo({ left: offset - 30, behavior: "smooth" });
       }, 400);
       setTimeout(() => {
         container.style.overflow = "hidden";
+        container.style.pointerEvents = "initial";
       }, 1000);
     } else {
-      container.style.overflow = "scroll";
+      setTimeout(() => {
+        const center = document.getElementById("p2");
+        const centerPos =
+          center.offsetLeft - (175 / 2 + (window.innerWidth - 2 * 175) / 2);
+        container.style.overflow = "scroll";
+        container.scrollTo({ left: centerPos, behavior: "smooth" });
+      }, 400);
     }
   };
 

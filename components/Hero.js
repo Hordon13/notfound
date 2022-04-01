@@ -24,7 +24,7 @@ const Hero = () => {
           <div className={styles.headline}>
             <div className={styles.cta}>
               <span>
-                <a href="">mine neither</a>
+                <a href="#intro">mine neither</a>
               </span>
             </div>
             <h2>and yours?</h2>
@@ -84,7 +84,7 @@ const Hero = () => {
         </header>
         <div className={styles.cta}>
           <span>
-            <a href="">mine neither</a>
+            <a href="#intro">mine neither</a>
           </span>
         </div>
       </section>

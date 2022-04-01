@@ -8,7 +8,7 @@ const Intro = () => {
   const [isStackExpanded, setIsStackExpanded] = useState(false);
 
   return (
-    <section className={styles.container}>
+    <div id="intro" className={styles.container}>
       <div className={styles.content}>
         <section className={styles.card}>
           <p>
@@ -722,7 +722,7 @@ const Intro = () => {
           </svg>
         </section>
       </div>
-    </section>
+    </div>
   );
 };
 
