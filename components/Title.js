@@ -28,7 +28,7 @@ const Title = ({ text }) => {
   }, [distort]);
 
   return (
-    <h2
+    <h3
       className={styles.container}
       id={text}
       style={{
@@ -57,7 +57,7 @@ const Title = ({ text }) => {
       >
         {text}
       </span>
-    </h2>
+    </h3>
   );
 };
 

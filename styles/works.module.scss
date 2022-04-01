@@ -3,7 +3,7 @@
 .container {
   padding-top: 20px;
 
-  h1 {
+  h2 {
     font-family: "Altero";
     font-size: 42px;
     line-height: 1;
@@ -35,6 +35,7 @@
       font-size: 21px;
       position: relative;
       transition: min-width ease-in-out 0.4s, height ease-in-out 0.4s;
+      user-select: none;
 
       .circle {
         width: 100px;
@@ -50,6 +51,19 @@
         svg {
           width: 40%;
           opacity: 0.9;
+        }
+
+        span {
+          position: absolute;
+          opacity: 0;
+          height: 0;
+          width: 0;
+
+          & > svg {
+            width: auto;
+            margin-left: 6px;
+            padding-bottom: 2px;
+          }
         }
       }
 
@@ -71,6 +85,39 @@
         border-radius: 12px;
         width: calc(100vw - 60px);
         height: calc(100vw - 60px);
+        position: relative;
+
+        span {
+          font-family: "Altero";
+          font-size: 18px;
+          height: auto;
+          width: auto;
+          opacity: 1;
+          transition: opacity 0.5s linear 0.8s;
+          color: #313131;
+        }
+
+        span:nth-of-type(1) {
+          top: 24px;
+          left: 24px;
+        }
+
+        span:nth-of-type(2) {
+          top: 24px;
+          right: 24px;
+        }
+
+        span:nth-of-type(3) {
+          display: flex;
+          align-items: center;
+          bottom: 24px;
+          right: 24px;
+        }
+
+        span:nth-of-type(4) {
+          bottom: 24px;
+          left: 24px;
+        }
       }
 
       & > svg {
@@ -83,7 +130,7 @@
 
     .projectFade {
       opacity: 0;
-      transition: opacity .4s ease-in-out .2s;
+      transition: opacity 0.4s ease-in-out 0.2s;
     }
   }
 }

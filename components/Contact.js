@@ -1,34 +1,18 @@
 import styles from "../styles/contact.module.scss";
 
 const Contact = () => {
-  const details = {
-    name: "unknown",
-    email: "unknown",
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    fetch("/api/inquiry", {
-      method: "POST",
-      headers: {
-        Accept: "application/json, text/plain, */*",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(details),
-    });
-  };
-
   return (
     <section className={styles.container}>
       <div className={styles.content}>
-        <h1>contact</h1>
+        <h2>contact</h2>
         <div className={styles.contact}>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi,
-            voluptatem tempore! Reiciendis suscipit eveniet dolorum, quis soluta
-            corporis odit alias?
+            If you have any questions about the working process, prices, or
+            other details, you may find answers on our FAQ page. <br /> <br />
+            Please feel free to contact us at any time. Don't worry if you don't
+            know exactly what you want, we will help you figure it out.
           </p>
-          <a href="mailto:hor.donat@gmail.com">send an email</a>
+          <a href="mailto:page@notfound.hu">send an email</a>
         </div>
         <footer>
           <p>{`${new Date().getFullYear()} Budapest`}</p>

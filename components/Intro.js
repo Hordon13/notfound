@@ -22,10 +22,15 @@ const Intro = () => {
             <Title text={"unique"} />
           </div>
           <div className={styles.text}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore sunt
-            hic qui impedit blanditiis obcaecati, incidunt nisi laboriosam
-            tempora ipsam maiores ab deserunt quas architecto, quos rem rerum
-            nostrum odio!
+            A website is like an outfit. It expresses who you are and what you
+            represent.
+            <br /> <br /> There are a lot of website builders and templates out
+            there that make the same boring websites over and over again.
+            <br /> <br />
+            We believe you deserve something unique...
+            <br /> <br />
+            Think of us as your own tailor, who will personalize your website to
+            your exact needs, down to the last details.
           </div>
           <svg viewBox="0 0 980 489.48047">
             <path
@@ -210,10 +215,17 @@ const Intro = () => {
               collab •
             </Marquee>
             <p>
-              Designing meaningful UI and UX is a skill on their own. While we
-              can create simple interfaces or working from existing design but
-              if you have a more complex design in your mind we will outsource
-              the task to our friends at ALTRD Studio.
+              Designing meaningful UI and UX are skills on their own. While we
+              can create simple interfaces or work from existing design but if
+              you have a more complex site in your mind we will outsource the
+              task to our friends at{" "}
+              <a
+                href="https://www.altrd.studio/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                ALTRD Studio.
+              </a>
             </p>
           </div>
         </section>
@@ -222,10 +234,14 @@ const Intro = () => {
             <Title text={"outstanding"} />
           </div>
           <div className={styles.text}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore sunt
-            hic qui impedit blanditiis obcaecati, incidunt nisi laboriosam
-            tempora ipsam maiores ab deserunt quas architecto, quos rem rerum
-            nostrum odio!
+            Search engines, like Google, are always picky when it comes to
+            websites. They only like snappy sites so if you want to see your
+            page at the top of the search results you have to make sure it is
+            fast.
+            <br /> <br />
+            We always place great emphasis on ensuring that the website scores
+            well in performance tests, which greatly improves overall SEO
+            results.
           </div>
           <svg viewBox="0 0 704 515" fill="none">
             <path
@@ -577,10 +593,41 @@ const Intro = () => {
               stack • tech stack • tech stack • tech stack •
             </Marquee>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo ad
-              repudiandae fugit! Eum vel animi placeat amet officia mollitia
-              harum? Quidem quia nisi officia, eos accusantium obcaecati
-              voluptates consequuntur possimus!
+              On the technical side, we are using the so-called{" "}
+              <a href="https://jamstack.org/" target="_blank" rel="noreferrer">
+                JAMstack.
+              </a>{" "}
+              This is an architecture designed to make the web faster, more
+              secure, and easier to scale.
+              <br /> <br />
+              On the frontend, we are using{" "}
+              <a href="https://nextjs.org/" target="_blank" rel="noreferrer">
+                Next.js
+              </a>{" "}
+              React framework. If required, we built the backend with{" "}
+              <a href="https://strapi.io/" target="_blank" rel="noreferrer">
+                Strapi
+              </a>{" "}
+              headless CMS system. Finally, we host our sites on{" "}
+              <a href="https://vercel.com/" target="_blank" rel="noreferrer">
+                Vercel
+              </a>
+              ,{" "}
+              <a
+                href="https://www.netlify.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Netlify
+              </a>
+              , and{" "}
+              <a
+                href="https://www.digitalocean.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Digital Ocean.
+              </a>
             </p>
           </div>
         </section>
@@ -589,10 +636,10 @@ const Intro = () => {
             <Title text={"modern"} />
           </div>
           <div className={styles.text}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore sunt
-            hic qui impedit blanditiis obcaecati, incidunt nisi laboriosam
-            tempora ipsam maiores ab deserunt quas architecto, quos rem rerum
-            nostrum odio!
+            Web technologies are constantly evolving. One of our greatest
+            strengths as a small company is that we can easily evolve with these
+            changes to make sure our work is always relevant, up-to-date, and
+            future-proof.
           </div>
           <svg viewBox="0 0 1139.17088 654.54324">
             <circle cx="246.82682" cy="521.76476" fill="#f2f2f2" r="59.24334" />

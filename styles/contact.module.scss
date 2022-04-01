@@ -1,15 +1,13 @@
-@import 'scss/main';
+@import "scss/main";
 
 .container {
   padding: 100px 30px 160px 30px;
   position: relative;
 
   .content {
-
-    h1 {
+    h2 {
       font-size: 48px;
-      text-align: right;
-      font-family: 'Altero Outline';
+      font-family: "Altero Outline";
       color: $primary;
       font-weight: normal;
       margin-bottom: 15px;

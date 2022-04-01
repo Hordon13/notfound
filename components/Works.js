@@ -28,11 +28,11 @@ const Works = () => {
         container.style.pointerEvents = "initial";
       }, 1000);
     } else {
+      container.style.overflow = "scroll";
       setTimeout(() => {
         const center = document.getElementById("p2");
         const centerPos =
           center.offsetLeft - (175 / 2 + (window.innerWidth - 2 * 175) / 2);
-        container.style.overflow = "scroll";
         container.scrollTo({ left: centerPos, behavior: "smooth" });
       }, 400);
     }
@@ -40,7 +40,7 @@ const Works = () => {
 
   return (
     <section className={styles.container}>
-      <h1>featured works</h1>
+      <h2>featured works</h2>
       <div id="projects" className={styles.projects}>
         <div
           id="p1"
@@ -58,6 +58,41 @@ const Works = () => {
                 <path d="m42 0c7.7319865 0 14 6.2680135 14 14s-6.2680135 14-14 14-14-6.2680135-14-14 6.2680135-14 14-14zm0 6c-4.418278 0-8 3.581722-8 8s3.581722 8 8 8 8-3.581722 8-8-3.581722-8-8-8z" />
               </g>
             </svg>
+            <span>io line and round</span>
+            <span>$$</span>
+            <span>
+              <a
+                href="https://lineandround.io/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                visit site
+              </a>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M17 2H22V7"
+                  stroke="#000"
+                  strokeWidth="4"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                ></path>
+                <path
+                  d="M21 13V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H11"
+                  stroke="#000"
+                  strokeWidth="4"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                ></path>
+                <path
+                  d="M13 11L21.5 2.5"
+                  stroke="#000"
+                  strokeWidth="4"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                ></path>
+              </svg>
+            </span>
+            <span>2021</span>
           </div>
           <svg
             viewBox="0 0 300 300"
@@ -113,6 +148,41 @@ const Works = () => {
                 <ellipse cx="112.429" cy="59.07" rx="10.0712" ry="10.1052" />
               </g>
             </svg>
+            <span>solarmada</span>
+            <span>$$$</span>
+            <span>
+              <a
+                href="https://www.solarmada.eu/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                visit site
+              </a>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M17 2H22V7"
+                  stroke="#000"
+                  strokeWidth="4"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                ></path>
+                <path
+                  d="M21 13V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H11"
+                  stroke="#000"
+                  strokeWidth="4"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                ></path>
+                <path
+                  d="M13 11L21.5 2.5"
+                  stroke="#000"
+                  strokeWidth="4"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                ></path>
+              </svg>
+            </span>
+            <span>2022</span>
           </div>
           <svg
             viewBox="0 0 300 300"
@@ -161,6 +231,41 @@ const Works = () => {
                 <path d="m247.951 1.09253-.029 117.02747h84.839v-5.654h-68.405v-111.37347z" />
               </g>
             </svg>
+            <span>altrd studio</span>
+            <span>$</span>
+            <span>
+              <a
+                href="https://www.altrd.studio/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                visit site
+              </a>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M17 2H22V7"
+                  stroke="#000"
+                  strokeWidth="4"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                ></path>
+                <path
+                  d="M21 13V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H11"
+                  stroke="#000"
+                  strokeWidth="4"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                ></path>
+                <path
+                  d="M13 11L21.5 2.5"
+                  stroke="#000"
+                  strokeWidth="4"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                ></path>
+              </svg>
+            </span>
+            <span>2021</span>
           </div>
           <svg
             viewBox="0 0 300 300"

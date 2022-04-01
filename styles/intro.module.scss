@@ -72,6 +72,11 @@
           opacity: 0;
           height: auto;
           line-height: 0;
+
+          a {
+            color: $neutral-dark;
+            text-decoration: underline;
+          }
         }
       }
 
@@ -84,7 +89,6 @@
         color: $neutral-dark-fade;
 
         p {
-          text-align: justify;
           font-family: "NB International";
           opacity: 1;
           line-height: 1.4;
