@@ -23,8 +23,8 @@ const Works = () => {
         container.scrollTo({ left: offset - 30, behavior: "smooth" });
       }, 400);
       setTimeout(() => {
-         container.style.overflow = "hidden";
-      }, 450);
+        container.style.overflow = "hidden";
+      }, 600);
     } else {
       container.style.overflow = "scroll";
     }
