@@ -24,7 +24,7 @@ const Works = () => {
       }, 400);
       setTimeout(() => {
         container.style.overflow = "hidden";
-      }, 600);
+      }, 1000);
     } else {
       container.style.overflow = "scroll";
     }
