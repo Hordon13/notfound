@@ -3,137 +3,217 @@
 .container {
   padding-top: 20px;
 
-  h2 {
-    font-family: "Altero";
-    font-size: 42px;
-    line-height: 1;
-    margin-bottom: 100px;
-    padding-left: 30px;
-  }
-
-  .projects {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: calc((100vw - 2 * 175px) / 2);
-    overflow-x: scroll;
-    scrollbar-width: none;
-    padding: 0 30px;
-    margin: 0 auto;
-
-    &::-webkit-scrollbar {
-      display: none;
+  .content {
+    h2 {
+      font-family: "Altero";
+      font-size: 42px;
+      line-height: 1;
+      margin-bottom: 100px;
+      padding-left: 30px;
     }
 
-    .project {
-      width: 175px;
-      min-width: 175px;
-      height: 175px;
-      overflow: hidden;
+    .projects {
       display: grid;
-      place-items: center;
-      color: $neutral-dark-fade;
-      font-size: 21px;
-      position: relative;
-      transition: min-width ease-in-out 0.4s, height ease-in-out 0.4s;
-      user-select: none;
+      grid-template-columns: repeat(3, 1fr);
+      gap: calc((100vw - 2 * 175px) / 2);
+      overflow-x: scroll;
+      scrollbar-width: none;
+      padding: 0 30px;
+      margin: 0 auto;
 
-      .circle {
-        width: 100px;
-        height: 100px;
-        background-color: $primary;
-        border-radius: 50%;
-        position: absolute;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .project {
+        width: 175px;
+        min-width: 175px;
+        height: 175px;
+        overflow: hidden;
         display: grid;
         place-items: center;
-        transition: width 0.4s ease-in-out, height 0.4s ease-in-out,
-          border-radius 0.4s ease-in-out 0.1s;
+        color: $neutral-dark-fade;
+        font-size: 21px;
+        position: relative;
+        transition: min-width ease-in-out 0.4s, height ease-in-out 0.4s;
+        user-select: none;
 
-        svg {
-          width: 40%;
-          opacity: 0.9;
-        }
-
-        span {
+        .circle {
+          width: 100px;
+          height: 100px;
+          background-color: $primary;
+          border-radius: 50%;
           position: absolute;
-          opacity: 0;
-          height: 0;
-          width: 0;
+          display: grid;
+          place-items: center;
+          transition: width 0.4s ease-in-out, height 0.4s ease-in-out,
+            border-radius 0.4s ease-in-out 0.1s;
 
-          & > svg {
-            width: auto;
-            margin-left: 6px;
-            padding-bottom: 2px;
+          svg {
+            width: 40%;
+            opacity: 0.9;
+          }
+
+          span {
+            position: absolute;
+            opacity: 0;
+            height: 0;
+            width: 0;
+
+            & > svg {
+              width: auto;
+              margin-left: 6px;
+              padding-bottom: 2px;
+            }
           }
         }
+
+        & > svg {
+          position: absolute;
+          animation: rotation 20s linear infinite;
+          opacity: 0.3;
+          transition: opacity linear 0.6s;
+          transition-delay: 0.2s;
+          width: 350px;
+        }
       }
 
-      & > svg {
-        position: absolute;
-        animation: rotation 20s linear infinite;
-        opacity: 0.3;
-        transition: opacity linear 0.6s;
-        transition-delay: 0.2s;
-        width: 350px;
-      }
-    }
-
-    .projectExpanded {
-      min-width: calc(100vw - 60px);
-      height: calc(100vw - 60px);
-
-      .circle {
-        border-radius: 12px;
-        width: calc(100vw - 60px);
+      .projectExpanded {
+        min-width: calc(100vw - 60px);
         height: calc(100vw - 60px);
-        position: relative;
 
-        span {
-          font-family: "Altero";
-          font-size: 18px;
-          height: auto;
-          width: auto;
-          opacity: 1;
-          transition: opacity 0.5s linear 0.8s;
-          color: #313131;
+        .circle {
+          border-radius: 12px;
+          width: calc(100vw - 60px);
+          height: calc(100vw - 60px);
+          position: relative;
+
+          span {
+            font-family: "Altero";
+            font-size: 18px;
+            height: auto;
+            width: auto;
+            opacity: 1;
+            transition: opacity 0.5s linear 0.8s;
+            color: #313131;
+          }
+
+          span:nth-of-type(1) {
+            top: 24px;
+            left: 24px;
+          }
+
+          span:nth-of-type(2) {
+            top: 24px;
+            right: 24px;
+          }
+
+          span:nth-of-type(3) {
+            display: flex;
+            align-items: center;
+            bottom: 24px;
+            right: 24px;
+          }
+
+          span:nth-of-type(4) {
+            bottom: 24px;
+            left: 24px;
+          }
         }
 
-        span:nth-of-type(1) {
-          top: 24px;
-          left: 24px;
-        }
-
-        span:nth-of-type(2) {
-          top: 24px;
-          right: 24px;
-        }
-
-        span:nth-of-type(3) {
-          display: flex;
-          align-items: center;
-          bottom: 24px;
-          right: 24px;
-        }
-
-        span:nth-of-type(4) {
-          bottom: 24px;
-          left: 24px;
+        & > svg {
+          height: 0;
+          width: 0;
+          opacity: 0;
+          transition: opacity linear 0.1s;
         }
       }
 
-      & > svg {
-        height: 0;
-        width: 0;
+      .projectFade {
         opacity: 0;
-        transition: opacity linear 0.1s;
+        transition: opacity 0.4s ease-in-out 0.2s;
       }
-    }
-
-    .projectFade {
-      opacity: 0;
-      transition: opacity 0.4s ease-in-out 0.2s;
     }
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 840px) {
+  .container {
+    padding: 0 48px;
+    display: grid;
+    place-items: center;
+
+    .content {
+      max-width: 768px;
+      padding-top: 64px;
+
+      h2 {
+        font-size: 56px;
+        padding-left: 0;
+        margin-bottom: 112px;
+      }
+
+      .projects {
+        width: 768px;
+        overflow: hidden;
+        gap: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0;
+        margin: 0;
+
+        .projectExpanded {
+          min-width: 350px;
+          height: 350px;
+
+          .circle {
+            border-radius: 18px;
+            width: 350px;
+            height: 350px;
+            position: relative;
+
+            span {
+              font-family: "Altero";
+              font-size: 18px;
+              height: auto;
+              width: auto;
+              opacity: 1;
+              transition: opacity 0.5s linear 0.8s;
+              color: #313131;
+            }
+
+            span:nth-of-type(1) {
+              top: 24px;
+              left: 24px;
+            }
+
+            span:nth-of-type(2) {
+              top: 24px;
+              right: 24px;
+            }
+
+            span:nth-of-type(3) {
+              display: flex;
+              align-items: center;
+              bottom: 24px;
+              right: 24px;
+            }
+
+            span:nth-of-type(4) {
+              bottom: 24px;
+              left: 24px;
+            }
+          }
+
+          & > svg {
+            height: 0;
+            width: 0;
+            opacity: 0;
+            transition: opacity linear 0.1s;
+          }
+        }
+      }
+    }
+  }
 }

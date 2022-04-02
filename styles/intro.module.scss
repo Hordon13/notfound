@@ -6,7 +6,6 @@
   .content {
     .card {
       width: 100%;
-      max-width: 500px;
       margin: 0 auto;
       background-color: $primary;
       color: $neutral-dark;
@@ -21,7 +20,6 @@
     }
 
     .feature {
-      max-width: 600px;
       margin: 0 auto 70px auto;
       padding-top: 18px;
       display: flex;
@@ -83,7 +81,7 @@
       .detailsExpanded {
         max-height: 100vh;
         height: auto;
-        border-radius: 12px;
+        border-radius: 18px;
         background-color: $primary;
         padding-top: 16px;
         color: $neutral-dark-fade;
@@ -104,91 +102,67 @@
   }
 }
 
-@media only screen and (min-width: 576px) {
-  .container .content .feature {
-    padding-top: 28px;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 840px) {
   .container {
-    padding: 0 72px;
+    padding: 0 36px;
+    display: grid;
+    place-items: center;
 
     .content {
-      padding-top: 150px;
+      max-width: 768px;
+      padding: 144px 0 0;
 
       .card {
-        max-width: 1000px;
-        font-size: 36px;
-        padding: 48px 36px;
-        border-radius: 18px;
-        gap: 36px;
-        margin-bottom: 150px;
-        position: relative;
-
-        &::after {
-          content: "";
-          background-color: $primary;
-          width: 100%;
-          height: 100%;
-          position: absolute;
-          top: 0;
-          left: 0;
-          filter: blur(15px);
-          z-index: -1;
-          opacity: 0.6;
-        }
+        padding: 56px;
+        font-size: 24px;
+        max-width: 720px;
+        margin-bottom: 144px;
       }
 
       .feature {
-        max-width: none;
-        margin: 0 auto 200px auto;
-        padding-top: 56px;
+        margin: 0 auto 112px auto;
+
+        h3 {
+          font-size: 72px;
+          padding-top: 36px;
+        }
 
         .title {
-          text-align: right;
-          padding-right: 150px;
-          margin-bottom: 100px;
+          margin-bottom: 96px;
         }
 
         .text {
-          padding: 36px;
-          font-size: 30px;
-          border-radius: 18px;
-          width: 60%;
-          margin-bottom: 50px;
-          margin-left: 150px;
-          background-color: $neutral-dark-fade;
+          max-width: 720px;
+          padding: 56px;
+          font-size: 24px;
+          align-self: flex-end;
+          margin-bottom: 56px;
+          line-height: 1.3;
+
+          br {
+            display: block;
+            content: "";
+            margin-top: 16px;
+          }
         }
 
         svg {
-          width: 60%;
-          align-self: flex-end;
-          margin-right: 150px;
-        }
-      }
-
-      .feature:nth-of-type(odd) {
-        .title {
-          text-align: left;
-          padding-left: 150px;
+          max-width: 600px;
         }
 
-        .text {
-          align-self: flex-end;
-          margin-right: 150px;
+        .details {
+          margin-top: 112px;
         }
 
-        svg {
-          align-self: flex-start;
-          margin-left: 150px;
-          width: 50%;
+        .detailsExpanded {
+          p {
+            line-height: 1.3;
+            font-size: 24px;
+            padding: 56px;
+            max-width: 720px;
+            margin: 36px auto 0 auto;
+          }
         }
-      }
-
-      .feature:last-of-type svg {
-        width: 65%;
-        margin-right: 90px;
       }
     }
   }

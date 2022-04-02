@@ -6,7 +6,7 @@ const Hero = () => {
   const [translateX, setTranslateX] = useState(0);
   const scrollMe = () => setTranslateX(window.scrollY / 100);
   useEffect(() => {
-    window.addEventListener("scroll", throttle(scrollMe, 10));
+    window.addEventListener("scroll", throttle(scrollMe, 5));
   }, []);
 
   return (
