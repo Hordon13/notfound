@@ -102,15 +102,17 @@
   }
 }
 
-@media only screen and (min-width: 840px) {
+@media only screen and (min-width: 768px) {
   .container {
-    padding: 0 36px;
+    padding: 0 48px;
     display: grid;
     place-items: center;
 
     .content {
       max-width: 768px;
+      width: 100%;
       padding: 144px 0 0;
+      margin: 0 auto;
 
       .card {
         padding: 56px;
